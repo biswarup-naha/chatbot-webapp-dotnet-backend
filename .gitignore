@@ -1,0 +1,5 @@
+# Ignore appsettings files
+appsettings.json
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
