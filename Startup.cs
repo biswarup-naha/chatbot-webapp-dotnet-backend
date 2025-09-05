@@ -1,5 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
+using MongoDB.Driver;
+using platychat_dotnet.Repositories;
+using platychat_dotnet.Services;
+using platychat_dotnet.Settings;
 
 namespace platychat_dotnet
 {
@@ -22,13 +28,24 @@ namespace platychat_dotnet
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddMicrosoftIdentityWebApi(_configuration.GetSection("AzureAd"));
 
+            services.AddAuthentication()
+                    .AddGoogle("Google", options =>
+                    {
+                        options.ClientId = "your-google-client-id";
+                        options.ClientSecret = "your-google-client-secret";
+                        options.CallbackPath = "/signin-google";
+                    });
+
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.Configure<MongoDbSettings>(_configuration.GetSection("MongoDBSettings"));
         }
-        
-        // configure middelwares function
-        internal void ConfigureMiddlewares(IApplicationBuilder app)
+
+        // configure middlewares function
+        internal void ConfigureMiddlewares(WebApplication app)
         {
             // swagger setup
             if (_environment.IsDevelopment())
@@ -45,10 +62,7 @@ namespace platychat_dotnet
             app.UseAuthorization();
 
             // routes setup
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.MapControllers();
         }
     }
 }

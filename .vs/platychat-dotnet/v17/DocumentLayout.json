@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\",
+  "WorkspaceRootPath": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\source\\repos\\platychat-dotnet\\platychat-dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|solutionrelative:platychat-dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\source\\repos\\platychat-dotnet\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\projects\\ai-chat-back\\platychat-dotnet\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\source\\repos\\platychat-dotnet\\platychat-dotnet.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|solutionrelative:platychat-dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|solutionrelative:platychat-dotnet.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\source\\repos\\platychat-dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|c:\\users\\ct_user\\projects\\ai-chat-back\\platychat-dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32236A50-E8ED-4A01-B647-A914871BDF87}|platychat-dotnet.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,30 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\Startup.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\Startup.cs",
               "RelativeDocumentMoniker": "Startup.cs",
-              "ToolTip": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\Startup.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\Startup.cs",
               "RelativeToolTip": "Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T06:44:05.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "platychat-dotnet",
-              "DocumentMoniker": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\platychat-dotnet.csproj",
+              "DocumentIndex": 1,
+              "Title": "platychat-dotnet.csproj",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.csproj",
               "RelativeDocumentMoniker": "platychat-dotnet.csproj",
-              "ToolTip": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\platychat-dotnet.csproj",
+              "ToolTip": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.csproj",
               "RelativeToolTip": "platychat-dotnet.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-09-05T06:41:16.928Z",
               "EditorCaption": ""
@@ -58,9 +58,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "platychat-dotnet.http",
-              "DocumentMoniker": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\platychat-dotnet.http",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.http",
               "RelativeDocumentMoniker": "platychat-dotnet.http",
-              "ToolTip": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\platychat-dotnet.http",
+              "ToolTip": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.http",
               "RelativeToolTip": "platychat-dotnet.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
@@ -71,11 +71,11 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\CT_USER\\source\\repos\\platychat-dotnet\\Program.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T06:25:27.619Z",
               "EditorCaption": ""

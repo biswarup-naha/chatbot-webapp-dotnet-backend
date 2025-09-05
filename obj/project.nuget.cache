@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "whi/WRFKlfY=",
+  "dgSpecHash": "MKeBFRSACxU=",
   "success": true,
   "projectFilePath": "C:\\Users\\CT_USER\\projects\\ai-chat-back\\platychat-dotnet\\platychat-dotnet.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",
+    "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\8.0.12\\microsoft.aspnetcore.authentication.google.8.0.12.nupkg.sha512",
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.oauth\\2.3.0\\microsoft.aspnetcore.authentication.oauth.2.3.0.nupkg.sha512",
     "C:\\Users\\CT_USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.19\\microsoft.aspnetcore.authentication.openidconnect.8.0.19.nupkg.sha512",
