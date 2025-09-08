@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using MongoDB.Driver;
+using platychat_dotnet.Hubs;
 using platychat_dotnet.Repositories;
 using platychat_dotnet.Services;
 using platychat_dotnet.Settings;
@@ -39,14 +40,32 @@ namespace platychat_dotnet
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+
+            services.Configure<MongoDbSettings>(_configuration.GetSection("MongoDBSettings"));
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
-            services.Configure<MongoDbSettings>(_configuration.GetSection("MongoDBSettings"));
+            services.AddScoped<IChatRepository, ChatRepository>();
+            services.AddHttpClient<IChatAiService, ChatAiService>();
+            services.AddSignalR();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy
+                        .WithOrigins("http://localhost:3000") // React app URL
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials(); // required for SignalR
+                        
+
+                });
+            });
         }
 
         // configure middlewares function
         internal void ConfigureMiddlewares(WebApplication app)
         {
+
             // swagger setup
             if (_environment.IsDevelopment())
             {
@@ -56,6 +75,8 @@ namespace platychat_dotnet
 
             // https setup
             app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             // auth setup
             app.UseAuthentication();
@@ -63,6 +84,7 @@ namespace platychat_dotnet
 
             // routes setup
             app.MapControllers();
+            app.MapHub<ChatHub>("/chathub");
         }
     }
 }

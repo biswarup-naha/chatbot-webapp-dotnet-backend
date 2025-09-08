@@ -51,6 +51,7 @@ namespace platychat_dotnet.Controllers
         }
 
 
+        #region Login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
@@ -82,3 +83,4 @@ namespace platychat_dotnet.Controllers
         }
     }
 }
+#endregion

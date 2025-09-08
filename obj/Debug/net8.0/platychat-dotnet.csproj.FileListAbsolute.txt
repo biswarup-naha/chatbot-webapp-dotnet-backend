@@ -81,3 +81,5 @@ C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\obj\Debug\net8.0\refint\
 C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\obj\Debug\net8.0\platychat-dotnet.pdb
 C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\obj\Debug\net8.0\platychat-dotnet.genruntimeconfig.cache
 C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\obj\Debug\net8.0\ref\platychat-dotnet.dll
+C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\bin\Debug\net8.0\libman.json
+C:\Users\CT_USER\projects\ai-chat-back\platychat-dotnet\bin\Debug\net8.0\platychat-dotnet.staticwebassets.runtime.json
