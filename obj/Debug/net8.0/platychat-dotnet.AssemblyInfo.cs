@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("platychat-dotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a24277e3d27c550baa34fc71e95c0ecf37b513d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b20ab47e16b66d07a6fdab4890ea6e1ed7eb1d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("platychat-dotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("platychat-dotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

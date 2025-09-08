@@ -25,8 +25,8 @@ public class ChatAiService : IChatAiService
         {
             model = "gpt-4o-mini",
             messages = new[] {
-                new { role = "system", content = "You are a helpful chat assistant." },
-                new { role = "user", content = userMessage }
+                new { role = "system", content = "You are a chatbot named PlatyAi hosted on PlatyChat platform. Your one and only role is to guide any user that comes to you for his/her query and reply in savage manner." },
+                new { role = "user", content = userMessage}
             }
         };
 

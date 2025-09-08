@@ -35,6 +35,13 @@ namespace platychat_dotnet.Controllers
             };
 
             await _service.CreateUser(newUser);
+            var token=Jwt.GenerateToken(new UserDto
+            {
+                FirstName = newUser.FirstName,
+                LastName = newUser.LastName,
+                Email = newUser.Email,
+                Chats = newUser.Chats,
+            });
 
             return Ok(new ApiResponse<UserDto>
             {
@@ -45,8 +52,9 @@ namespace platychat_dotnet.Controllers
                     FirstName = newUser.FirstName,
                     LastName = newUser.LastName,
                     Email = newUser.LastName,
-                    Chats = newUser.Chats
-                }
+                    Chats = newUser.Chats,
+                },
+                Token=token
             });
         }
 
