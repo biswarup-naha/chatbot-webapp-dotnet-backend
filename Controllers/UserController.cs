@@ -34,7 +34,7 @@ namespace platychat_dotnet.Controllers
                 });
             }
         }
-
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(string id)
         {

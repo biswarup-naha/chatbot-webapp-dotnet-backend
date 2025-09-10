@@ -33,8 +33,8 @@ namespace platychat_dotnet
             services.AddAuthentication()
                     .AddGoogle("Google", options =>
                     {
-                        options.ClientId = "your-google-client-id";
-                        options.ClientSecret = "your-google-client-secret";
+                        options.ClientId = _configuration["GoogleAuth:ClientId"];
+                        options.ClientSecret = _configuration["GoogleAuth:ClientSecret"];
                         options.CallbackPath = "/signin-google";
                     });
 

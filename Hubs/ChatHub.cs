@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using platychat_dotnet.Models;
 using platychat_dotnet.Repositories;
@@ -7,6 +8,7 @@ using platychat_dotnet.Services;
 
 namespace platychat_dotnet.Hubs;
 
+[Authorize]
 public class ChatHub : Hub
 {
     private readonly IChatRepository _repo;
