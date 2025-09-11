@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
@@ -8,6 +10,8 @@ using platychat_dotnet.Hubs;
 using platychat_dotnet.Repositories;
 using platychat_dotnet.Services;
 using platychat_dotnet.Settings;
+using platychat_dotnet.Utils;
+using platychat_dotnet.Validators;
 
 namespace platychat_dotnet
 {
@@ -25,6 +29,7 @@ namespace platychat_dotnet
 
 
         //configure services function
+        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -39,6 +44,31 @@ namespace platychat_dotnet
                     });
 
             services.AddControllers();
+            services.AddFluentValidation(fv =>
+                    {
+                        fv.RegisterValidatorsFromAssemblyContaining<RegisterValidator>();
+                    });
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = context =>
+                {
+                    var errors = context.ModelState
+                        .Where(e => e.Value?.Errors.Count > 0)
+                        .ToDictionary(
+                            kvp => kvp.Key,
+                            kvp => kvp.Value!.Errors.Select(e => e.ErrorMessage).ToArray()
+                        );
+
+                    var response = new ApiResponse<object>
+                    {
+                        Success = false,
+                        Message = "Validation failed",
+                        Result = errors
+                    };
+
+                    return new BadRequestObjectResult(response);
+                };
+            });
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(setup =>
             {
@@ -83,7 +113,7 @@ namespace platychat_dotnet
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials(); // required for SignalR
-                        
+
 
                 });
             });
