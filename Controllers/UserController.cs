@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using platychat_dotnet.DTOs;
@@ -36,6 +37,7 @@ namespace platychat_dotnet.Controllers
         }
         
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> Get(string id)
         {
             try
@@ -48,11 +50,12 @@ namespace platychat_dotnet.Controllers
                     Result = user
                 });
             }
-            catch (System.Exception)
+            catch (System.Exception e)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ApiResponse<string>
                 {
                     Success = false,
+                    Message=e.Message
                 });
             }
         }

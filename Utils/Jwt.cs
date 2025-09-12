@@ -18,7 +18,7 @@ public class Jwt
         {
             new Claim("firstName", user.FirstName),
             new Claim("lastName", user.FirstName),
-            new Claim(ClaimTypes.NameIdentifier, user.Email),
+            // new Claim(ClaimTypes.NameIdentifier, user.Email),
             new Claim("email", user.Email),
             new Claim("chats", string.Join(",", user.Chats)),
         };

@@ -29,19 +29,54 @@ namespace platychat_dotnet
 
 
         //configure services function
-        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddMicrosoftIdentityWebApi(_configuration.GetSection("AzureAd"));
 
-            services.AddAuthentication()
-                    .AddGoogle("Google", options =>
+            services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, options =>
+            {
+                options.Events = new JwtBearerEvents
+                {
+                    OnChallenge = context =>
                     {
-                        options.ClientId = _configuration["GoogleAuth:ClientId"];
-                        options.ClientSecret = _configuration["GoogleAuth:ClientSecret"];
-                        options.CallbackPath = "/signin-google";
-                    });
+                        // Skip default behavior
+                        context.HandleResponse();
+
+                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                        context.Response.ContentType = "application/json";
+
+                        var result = System.Text.Json.JsonSerializer.Serialize(new
+                        {
+                            Success = false,
+                            Message = "Unauthorized: Token missing or invalid"
+                        });
+
+                        return context.Response.WriteAsync(result);
+                    },
+                    OnForbidden = context =>
+                    {
+                        context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                        context.Response.ContentType = "application/json";
+
+                        var result = System.Text.Json.JsonSerializer.Serialize(new
+                        {
+                            Success = false,
+                            Message = "Forbidden: You don't have access to this resource"
+                        });
+
+                        return context.Response.WriteAsync(result);
+                    }
+                };
+            });
+
+            services.AddAuthentication()
+                   .AddGoogle("Google", options =>
+                   {
+                       options.ClientId = _configuration["GoogleAuth:ClientId"];
+                       options.ClientSecret = _configuration["GoogleAuth:ClientSecret"];
+                       options.CallbackPath = "/signin-google";
+                   });
 
             services.AddControllers();
             services.AddFluentValidation(fv =>
